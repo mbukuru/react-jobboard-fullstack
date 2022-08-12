@@ -1,0 +1,85 @@
+
+.header {
+    background-color: #2F3860;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+.logo {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: #B9C952;
+}
+
+.logo h1 {
+    color: white;
+    padding: 20px;
+    padding-left: 17px;
+    padding-top: 25px;
+}
+
+.logoNHeader {
+    display: flex;
+}
+
+.headerH1H2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.headerH1H2 h1 {
+    color: #B9C952;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.headerH1H2 h2 {
+    margin-top: 0px;
+    color: rgba(212, 209, 209, 0.877);
+}
+
+.HomeAbout {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #B9C952;
+    color: #2F3860;
+}
+
+.HomeAbout .Home, .HomeAbout .About, .HomeAbout .dot {
+    margin-top: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2F3860;
+    color: white;
+    text-align: center;
+    padding: 70px;
+  }
