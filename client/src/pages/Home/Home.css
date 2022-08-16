@@ -60,7 +60,7 @@ table {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 12%;
+    margin-top: 5%;
   }
   
   td, th {
@@ -69,7 +69,7 @@ table {
     padding: 8px;
   }
   
-  tr:nth-child(even) {
+  tbody:nth-child(even) {
     background-color: #dddddd;
   }
 
@@ -81,5 +81,5 @@ table {
     background-color: #2F3860;
     color: white;
     text-align: center;
-    padding: 70px;
+    padding: 30px;
   }

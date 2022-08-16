@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.css';
-import Footer from '../../components/footer/Footer.js'
+import Footer from '../../components/footer/Footer.js';
+import Axios from "axios";
+
 
 function Home() {
+
+    const [jobs, setJobs] = useState([]);
+
+    useEffect(() => {
+        Axios.get("http://localhost:8800/jobs/").then((response) => {
+            setJobs(response.data);
+            console.log("jobs", response.data)
+        });
+      }, []);
+
   return (
     <div className='Home'>
         <div className='header'>
@@ -22,32 +34,16 @@ function Home() {
                 <p className='About'>About</p>
         </div>
         <div className='jobs'>
-            <table>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-                <tr>
-                    <th>Company Inc - Jr Web Developer | Remote, US | Apply Here</th>
-                </tr>
-            </table>
+        <table>
+        {jobs.map(job => (
+
+            <tbody>
+            <tr>
+                <th>{job.company}  -  {job.role} |  {job.location} | <a href={job.link} target="_blank">Apply Here</a></th>
+            </tr>
+            </tbody>
+        ))}
+        </table>
         </div>
         <div className='footer'>
             <Footer />
